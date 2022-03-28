@@ -82,12 +82,11 @@ original or optomized model. This means that the second model, the optomized mod
 Here are all the classification reports and visualizations for all the models:
 
 ![](Resources/classification_1.PNG)
-![](Resources/classification_2.PNG)
-![](Resources/classification_3.PNG)
 ![](Resources/vis_1.PNG)
+![](Resources/classification_2.PNG)
 ![](Resources/vis_2.PNG)
+![](Resources/classification_3.PNG)
 ![](Resources/vis_3.PNG)
-
 ---
 ## Contributors
 Kevin Gross
