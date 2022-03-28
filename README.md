@@ -81,6 +81,13 @@ a bit more dramatically with an overall larger training set and SMA windows set 
 original or optomized model. This means that the second model, the optomized model, is the most accurate model in this notebook.
 Here are all the classification reports and visualizations for all the models:
 
+![](Resources/classification_1.PNG)
+![](Resources/classification_2.PNG)
+![](Resources/classification_3.PNG)
+![](Resources/vis_1.PNG)
+![](Resources/vis_2.PNG)
+![](Resources/vis_3.PNG)
+
 ---
 ## Contributors
 Kevin Gross
