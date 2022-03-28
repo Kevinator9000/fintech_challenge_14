@@ -7,19 +7,28 @@ a new ML model and compare performances. Below, you will find an analysis of eac
 ## Technologies
 This program utilizes Jupyter Lab with the following libraries:
 ![](Resources/imports.PNG)
-![](Resources/imports.PNG)
+
 ---
 ## Summary
 To begin, we will analyze the initial baseline model's performance. For this model we will use SKLearn's support vector machine. 
-Here is the classification report: ![](Resources/classification_1.PNG)
+
+Here is the classification report: 
+![](Resources/classification_1.PNG)
+
 We can see that the model seems to be fairly lopsided in its predictions, it obviously prefers +1 over -1. This is because the dataset we fed our model was very imbalanced
-with many more +1 signals than -1 signals (Counts in dataset: 1.0 = 2368, -1.0 = 1855). Here is a visualization of the original model's actual vs. strategy cumulative return: 
+with many more +1 signals than -1 signals (Counts in dataset: 1.0 = 2368, -1.0 = 1855). 
+
+Here is a visualization of the original model's actual vs. strategy cumulative return: 
 ![](Resources/vis_1.PNG)
 
 
 
 Next, we will use SKLearn's support vector machine once again. This time we will attempt to optomize the model by tuning the size of the training dataset and the SMA input 
-features. Here is the classification report for the optomized model: ![](Resources/classification_2.PNG)
+features. 
+
+Here is the classification report for the optomized model: 
+![](Resources/classification_2.PNG)
+
 The report shows us that the precision for +1 and -1 both rose by 0.01. The -1 recall gained 0.05 while +1 remained the same. The -1 f1-score increased by .03 while the +1 
 remained the same. Overall, this report shows us that our optomized model gained a bit more precision and recall for -1 while maintaining the same values for +1.
 The overall accuracy increased by 0.01
@@ -43,13 +52,16 @@ from larger short and long windows.
 
 
 
-Finally, we will use SKLearn's DecisionTreeClassifier to create a new model with a new ML classifier. Here is the classification report for the new model: 
+Finally, we will use SKLearn's DecisionTreeClassifier to create a new model with a new ML classifier. 
+
+Here is the classification report for the new model: 
 ![](Resources/classification_3.PNG)
 
 Comparing this report to the original model report shows us that the overall accuracy dropped by 0.07. The -1 precision rises by 0.56 while +1 decreases by 0.60. The -1 recall
 gains 0.01 while +1 decreases by 0.01. The -1 f1-score increases by 0.43 and the +1 decreases by 0.25. Overall, this shows us that the new model really improved on the -1
 precisionbut at the sacrifice of too much of +1's precision. The optomized model is very similar to the original with slightly higher numbers, so it is redundent to reiterate
 the differences.
+
 Here is a visualization of the new model's actual vs. strategy cumulative return:
 ![](Resources/vis_3.PNG)
 
